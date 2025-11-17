@@ -1,7 +1,7 @@
 
 function Techonology() {
   return (
-    <div>Techonology</div>
+    <div>Techonology Pacarat</div>
   )
 }
 
