@@ -1,8 +1,8 @@
+"use client";
 
-function Crew() {
-  return (
-    <div>Crew</div>
-  )
+import React from "react";
+import CrewCarousel from "../../components/CrewCarousel";
+
+export default function CrewPage() {
+  return <CrewCarousel />;
 }
-
-export default Crew
