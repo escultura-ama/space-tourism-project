@@ -35,3 +35,88 @@ h2,
 h3 {
   font-family: 'Bellefair', sans-serif;
 }
+
+/* Discover page styles */
+.discover-hero {
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(6,10,16,0.55), rgba(6,10,16,0.55)), url('/images/bg/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.discover-hero .title {
+  font-size: 64px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.discover-container {
+  max-width: 1100px;
+  margin: -60px auto 40px;
+  background: #0f1a25;
+  padding: 28px;
+  color: #cbd5e1;
+  border-radius: 2px;
+  box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 220px 120px 120px 120px;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 8px 20px 8px;
+}
+
+.filters input,
+.filters select {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #cbd5e1;
+  padding: 10px 12px;
+  border-radius: 2px;
+}
+
+.filters .apply-btn {
+  background: #fff;
+  color: #0b1220;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.missions-meta {
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  padding: 18px 0 8px;
+}
+
+.missions-list {
+  margin-top: 8px;
+}
+
+.mission-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 28px 0;
+}
+
+.mission-left { display: flex; gap: 20px; align-items: flex-start; }
+.mission-patch { width: 72px; height: 72px; object-fit: contain; }
+.mission-info { max-width: 72ch; }
+.mission-title { font-size: 18px; color: #fff; margin-bottom: 8px; }
+.mission-sub { color: rgba(255,255,255,0.7); margin-bottom: 12px; }
+.mission-actions a { margin-right: 10px; display:inline-block; }
+.mission-flight { width: 110px; text-align:center; color: rgba(255,255,255,0.7); }
+
+@media (max-width: 900px) {
+  .filters { grid-template-columns: 1fr 1fr; }
+  .discover-hero .title { font-size: 42px; }
+}
