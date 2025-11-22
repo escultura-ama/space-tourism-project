@@ -120,9 +120,8 @@ export default function Technology() {
               <Image
                 src={tech.imageSrc}
                 alt={tech.name}
-                width={500}
-                height={500}
                 className="object-contain"
+                sizes="33vw"
                 priority
               />
             ) : null}
