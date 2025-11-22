@@ -115,7 +115,7 @@ export default function Technology() {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:absolute lg:top-1/2 lg:right-0 lg:-translate-y-1/2">
+          <div className="hidden lg:block lg:static lg:top-1/2 lg:right-0 lg:-translate-y-1/2">
             {tech.imageSrc ? (
               <Image
                 src={tech.imageSrc}
