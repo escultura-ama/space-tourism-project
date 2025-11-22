@@ -74,7 +74,7 @@ export default function Technology() {
                 src={tech.imageSrc}
                 alt={tech.name}
                 fill
-                className="object-contain"
+                className="object-cover"
                 sizes="100vw"
                 priority
                 />
