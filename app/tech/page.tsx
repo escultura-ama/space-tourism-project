@@ -59,7 +59,7 @@ export default function Technology() {
                 src={tech.imageSrc}
                 alt={tech.name}
                 fill
-                className="w-10/12 object-contain"
+                className="object-contain"
                 sizes="100vw"
                 priority
                 />
@@ -74,8 +74,8 @@ export default function Technology() {
                 src={tech.imageSrc}
                 alt={tech.name}
                 fill
-                className="w-6/12 object-contain"
-                sizes="(max-width: 1023px) 80vw, 720px"
+                className="object-contain"
+                sizes="(max-width: 1023px) 80vw"
                 priority
                 />
               </div>
