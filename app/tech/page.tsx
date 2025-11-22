@@ -54,6 +54,7 @@ export default function Technology() {
 
           <div className="block md:hidden w-full flex justify-center mb-6">
             {tech.imageSrc && (
+              <div className="relative w-full h-[220px]">
               <Image
                 src={tech.imageSrc}
                 alt={tech.name}
@@ -62,11 +63,13 @@ export default function Technology() {
                 className="w-10/12 object-contain"
                 priority
                 />
+              </div>
             )}
           </div>
 
           <div className="hidden md:block lg:hidden w-full flex justify-center mb-6">
             {tech.imageSrc && (
+              <div className="relative w-full max-w-[720] h-[320]">
               <Image
                 src={tech.imageSrc}
                 alt={tech.name}
@@ -75,8 +78,8 @@ export default function Technology() {
                 className="w-6/12 object-contain"
                 priority
                 />
+              </div>
             )}
-
           </div>
 
 
