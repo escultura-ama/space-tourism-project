@@ -116,17 +116,18 @@ export default function Technology() {
           </div>
 
           <div className="hidden lg:block lg:absolute lg:top-1/2 lg:right-0 lg:-translate-y-1/2">
-            {tech.imageSrc ? (
-              <Image
-                src={tech.imageSrc}
-                alt={tech.name}
-                width={500}
-                height={500}
-                className="object-contain"
-                priority
-              />
-            ) : null}
-          </div>
+            {tech.imageSrc && (
+              <div className="relative w-[500px] h-[500px]">
+                <Image
+                  src={tech.imageSrc}
+                  alt={tech.name}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            )}
+        </div>
         </div>
       </div>
     </main>
