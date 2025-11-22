@@ -38,6 +38,12 @@ const technologies: Technology[] = [
   },
 ];
 
+const imageSrcs: string[] = [
+  '/images/technologies/lg-launch.png',
+  '/images/technologies/lg-spaceport.png',
+  '/images/technologies/lg-capsule.png'
+];
+
 export default function Technology() {
   const [activeTab, setActiveTab] = useState(0);
   const tech = technologies[activeTab];
@@ -51,6 +57,35 @@ export default function Technology() {
 
       <div className="flex-grow flex items-center justify-center">
         <div className="flex flex-col lg:flex-row text-center md:pb-28 lg:pb-0 items-center w-full">
+
+          <div className="block md:hidden w-full flex justify-center mb-6">
+            {tech.imageSrc && (
+              <Image
+                src={tech.imageSrc}
+                alt={tech.name}
+                width={360}
+                height={240}
+                className="w-10/12 object-contain"
+                priority
+                />
+            )}
+          </div>
+
+          <div className="hidden md:block lg:hidden w-full flex justify-center mb-6">
+            {tech.imageSrc && (
+              <Image
+                src={tech.imageSrc}
+                alt={tech.name}
+                width={440}
+                height={300}
+                className="w-6/12 object-contain"
+                priority
+                />
+            )}
+
+          </div>
+
+
           <div className="px-8 gap-4 lg:gap-8 flex lg:flex-col items-center justify-center">
             {technologies.map((_, index) => (
               <button
