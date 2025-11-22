@@ -35,3 +35,30 @@ h2,
 h3 {
   font-family: 'Bellefair', sans-serif;
 }
+
+/* Navbar hover effect: subtle lift and animated underline */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  transition: transform 150ms ease, color 150ms ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 3px;
+  width: 0;
+  background: currentColor;
+  transition: width 200ms ease;
+}
+.nav-link:hover {
+  transform: translateY(-3px);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .nav-link::after { bottom: -6px; height: 2px; }
+}

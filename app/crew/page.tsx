@@ -25,8 +25,7 @@ function Crew() {
           MEET YOUR CREW
         </h1>
         
-        {/* Crew content will go here */}
-        <p className="text-lg">Crew Drew</p>
+ 
         
       </div>
     </div>

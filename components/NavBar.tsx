@@ -76,7 +76,7 @@ const NavBar = () => {
                     } cursor-pointer`}
                 >
                   <p
-                    className="uppercase light hover:text-primaryText hover:underline underline-offset-[26px] transition duration-150 ease-in-out"
+                    className="nav-link uppercase light hover:text-primaryText transition duration-150 ease-in-out"
                     onClick={() => setActiveUrl(nav.url)}
                   >
                     <span className="hidden lg:inline bold">{nav.id}</span>
@@ -108,8 +108,8 @@ const NavBar = () => {
                 className="flex my-4 cursor-pointer"
               >
                 <p
-                  className={`${activeUrl === nav.url ? "text-white" : "text-primaryText"
-                    } ${activeUrl === nav.url ? "underline" : ""} bold uppercase hover:text-white hover:underline transition duration-150 ease-in-out underline-offset-[6px]`}
+                  className={`nav-link ${activeUrl === nav.url ? "text-white" : "text-primaryText"
+                    } ${activeUrl === nav.url ? "underline" : ""} bold uppercase hover:text-white transition duration-150 ease-in-out underline-offset-[6px]`}
                 >
                   {nav.id} <span className="ml-2  light">{nav.text}</span>
                 </p>
