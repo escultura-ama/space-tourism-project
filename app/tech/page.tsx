@@ -38,12 +38,6 @@ const technologies: Technology[] = [
   },
 ];
 
-const imageSrcs: string[] = [
-  '/images/technologies/lg-launch.png',
-  '/images/technologies/lg-spaceport.png',
-  '/images/technologies/lg-capsule.png'
-];
-
 export default function Technology() {
   const [activeTab, setActiveTab] = useState(0);
   const tech = technologies[activeTab];
@@ -76,8 +70,8 @@ export default function Technology() {
               <Image
                 src={tech.imageSrc}
                 alt={tech.name}
-                width={440}
-                height={300}
+                width={500}
+                height={500}
                 className="w-6/12 object-contain"
                 priority
                 />
