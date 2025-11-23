@@ -1,7 +1,8 @@
+"use client";
 
-import React from 'react';
+import React from "react";
 
-function Crew() {
+export default function CrewPage() {
   return (
     <div
       className="
@@ -18,10 +19,8 @@ function Crew() {
           MEET YOUR CREW
         </h1>
 
-        {/* ← Insert the other branch’s content here */}
+        {/* Placeholder for content from other branches */}
       </div>
     </div>
   );
 }
-
-export default Crew;
