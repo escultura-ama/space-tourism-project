@@ -43,7 +43,7 @@ export default function Technology() {
   const tech = technologies[activeTab];
 
   return (
-    <main className="bg-lg-tech-bg bg-cover flex flex-col min-h-screen bg-black md:justify-around pt-20 md:pt-28 pb-12 lg:pl-28">
+    <main className="bg-[--bg-tech-mobile] md:bg-[--bg-tech-desktop] bg-cover bg-no-repeat">
       <div className="flex text-white tracking-wider barlow-condensed mb-6 md:mb-10 justify-center md:justify-start md:ml-5 md:text-xl lg:pt-12 lg:text-2xl">
         <span className="opacity-25 mr-4 bold">03</span>
         <p>SPACE LAUNCH 101</p>
