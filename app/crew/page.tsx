@@ -1,4 +1,4 @@
-// Updated CrewCarousel with mouse wheel scrolling support
+// Updated CrewCarousel with click + scroll swiping effect (looping crew 1 → 2 → 3 → 4 → 1)
 
 "use client";
 
