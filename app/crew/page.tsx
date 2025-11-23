@@ -1,4 +1,6 @@
-"use client"
+// Updated CrewCarousel with mouse wheel scrolling support
+
+"use client";
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -54,6 +56,22 @@ export default function CrewCarousel() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  // Mouse wheel scroll navigation
+  useEffect(() => {
+    const onWheel = (e: WheelEvent) => {
+      if (e.deltaY > 0) {
+        // Scroll down → next crew
+        setIndex((i) => (i + 1) % CREW.length);
+      } else if (e.deltaY < 0) {
+        // Scroll up → previous crew
+        setIndex((i) => (i - 1 + CREW.length) % CREW.length);
+      }
+    };
+
+    window.addEventListener("wheel", onWheel, { passive: true });
+    return () => window.removeEventListener("wheel", onWheel);
   }, []);
 
   // Click anywhere to swipe next
