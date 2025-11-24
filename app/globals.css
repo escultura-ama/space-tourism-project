@@ -40,7 +40,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(6,10,16,0.55), rgba(6,10,16,0.55)), url('/images/bg/hero.jpg');
+  background-image: linear-gradient(rgba(6, 10, 16, 0.55), rgba(6, 10, 16, 0.55)), url('/images/bg/hero.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -59,7 +59,7 @@ h3 {
   padding: 28px;
   color: #cbd5e1;
   border-radius: 2px;
-  box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+  box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
 }
 
 .filters {
@@ -73,7 +73,7 @@ h3 {
 .filters input,
 .filters select {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: #cbd5e1;
   padding: 10px 12px;
   border-radius: 2px;
@@ -90,7 +90,7 @@ h3 {
 
 .missions-meta {
   text-align: center;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   padding: 18px 0 8px;
 }
 
@@ -102,21 +102,56 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding: 28px 0;
 }
 
-.mission-left { display: flex; gap: 20px; align-items: flex-start; }
-.mission-patch { width: 72px; height: 72px; object-fit: contain; }
-.mission-info { max-width: 72ch; }
-.mission-title { font-size: 18px; color: #fff; margin-bottom: 8px; }
-.mission-sub { color: rgba(255,255,255,0.7); margin-bottom: 12px; }
-.mission-actions a { margin-right: 10px; display:inline-block; }
-.mission-flight { width: 110px; text-align:center; color: rgba(255,255,255,0.7); }
+.mission-left {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.mission-patch {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.mission-info {
+  max-width: 72ch;
+}
+
+.mission-title {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.mission-sub {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+}
+
+.mission-actions a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.mission-flight {
+  width: 110px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
 
 @media (max-width: 900px) {
-  .filters { grid-template-columns: 1fr 1fr; }
-  .discover-hero .title { font-size: 42px; }
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .discover-hero .title {
+    font-size: 42px;
+  }
 }
 
 .bg-tech-bg {
@@ -148,4 +183,34 @@ h3 {
   .tech-background {
     background-image: url('/images/bg/lg-tech-bg.png');
   }
+}
+
+.bg-destinations-bg {
+  background-image: url('/images/bg/destinations-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.lg\:bg-lg-destinations-bg {
+  /* This selector matches the class name `lg:bg-lg-destinations-bg` used in JSX */
+  background-image: url('/images/bg/lg-destinations-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Optional: other page backgrounds if you need them */
+.bg-home-bg {
+  background-image: url('/images/bg/home-bg.png');
+}
+
+.lg\:bg-lg-home-bg {
+  background-image: url('/images/bg/lg-home-bg.png');
+}
+
+.bg-tech-bg {
+  background-image: url('/images/bg/tech-bg.png');
+}
+
+.lg\:bg-lg-tech-bg {
+  background-image: url('/images/bg/lg-tech-bg.png');
 }
