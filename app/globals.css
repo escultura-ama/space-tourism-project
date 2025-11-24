@@ -4,7 +4,6 @@
 
 @import "tailwindcss";
 
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -15,6 +14,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* ⭐ Add your background images here */
+  --bg-tech-mobile: url('/images/bg/tech-bg.png');
+  --bg-tech-desktop: url('/images/bg/lg-tech-bg.png');
 }
 
 @media (prefers-color-scheme: dark) {
