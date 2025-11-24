@@ -11,6 +11,14 @@ const nextConfig: NextConfig = {
         protocol: 'http',
         hostname: 'spacexpatchlist.space',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+      },
+      {
+        protocol: 'http',
+        hostname: 'i.imgur.com',
+      },
     ],
   },
 };

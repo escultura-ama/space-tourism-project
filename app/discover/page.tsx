@@ -3,6 +3,28 @@
 import { useState, useMemo } from 'react'
 import { launches } from '../../data/launches'
 import { launchpads } from '../../data/launchpads'
+import Image from 'next/image'
+
+// Small helper component that falls back to a provided placeholder when the
+// original `src` is missing or fails to load. Uses local state because
+// Next/Image doesn't allow swapping `e.currentTarget.src` like a plain <img>.
+function PatchImage({ src, alt, width = 64, height = 64, className }: any) {
+  const [errored, setErrored] = useState(false)
+  const fallback = 'http://i.imgur.com/RJjhalG.png'
+  const displaySrc = !src || errored ? fallback : src
+
+  return (
+    <Image
+      width={width}
+      height={height}
+      src={displaySrc}
+      alt={alt}
+      className={className}
+      onError={() => setErrored(true)}
+    />
+  )
+}
+
 
 function ordinal(n: number) {
   const s = ['th', 'st', 'nd', 'rd']
@@ -66,7 +88,9 @@ function Discover() {
     <div className="bg-[#0a0e19] min-h-screen">
       {/* Hero Section */}
       <div className="relative h-[200px] sm:h-[300px] lg:h-[65vh] bg-gradient-to-b from-transparent to-[#0a0e19]">
-        <img
+        <Image
+          width={1920}
+          height={1080}
           src="/images/banner.png"
           alt="banner"
           className="absolute inset-0 w-full h-full object-cover"
@@ -194,15 +218,14 @@ function Discover() {
               >
                 {/* Patch */}
                 <div className="text-left w-[10%]">
-                  <img
-                    src={patch || 'http://i.imgur.com/RJjhalG.png'}
+                  <PatchImage
+                    width={64}
+                    height={64}
+                    src={patch}
                     alt="mission patch"
                     className="w-16 h-16 object-contain"
-                    onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src = 'http://i.imgur.com/RJjhalG.png';
-                    }}
                   />
+
                 </div>
 
                 {/* Info */}
