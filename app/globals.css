@@ -35,3 +35,34 @@ h2,
 h3 {
   font-family: 'Bellefair', sans-serif;
 }
+
+.bg-tech-bg {
+  background-image: url('/images/bg/tech-bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.bg-lg-tech-bg {
+  background-image: url('/images/bg/lg-tech-bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+@media (min-width: 1024px) {
+  .bg-tech-bg {
+    display: none;
+  }
+}
+
+.tech-background {
+  background-image: url('/images/bg/tech-bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .tech-background {
+    background-image: url('/images/bg/lg-tech-bg.png');
+  }
+}
