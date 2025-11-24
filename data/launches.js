@@ -28,9 +28,10 @@ export const launches = [
     ],
     landing_type: null,
     landing_vehicle: null,
+    launch_success: false,
     links: {
       mission_patch:
-        "http://spacexpatchlist.space/images/thumbs/falcon_1_flight_1.png",
+        "https://spacexpatchlist.space/thumbs/spacex_f1_001_first_flight.png",
       article_link:
         "https://www.space.com/2196-spacex-inaugural-falcon-1-rocket-lost-launch.html",
       video_link: "https://www.youtube.com/watch?v=0a_00nJ_Y88",
@@ -71,7 +72,7 @@ export const launches = [
     landing_vehicle: null,
     links: {
       mission_patch:
-        "http://spacexpatchlist.space/images/thumbs/falcon_1_flight_2.png",
+        "https://spacexpatchlist.space/thumbs/spacex_f1_002_second_flight.png",
       article_link:
         "https://www.space.com/3590-spacex-falcon-1-rocket-fails-reach-orbit.html",
       video_link: "https://www.youtube.com/watch?v=YMvQsmLv44o",
@@ -121,7 +122,7 @@ export const launches = [
     landing_vehicle: null,
     links: {
       mission_patch:
-        "http://spacexpatchlist.space/images/thumbs/falcon_1_flight_3.png",
+        "https://spacexpatchlist.space/thumbs/spacex_f1_003_third_flight.png",
       article_link:
         "http://www.spacex.com/news/2013/02/11/falcon-1-flight-3-mission-summary",
       video_link: "https://www.youtube.com/watch?v=Qz0yJ8N3cA0",
@@ -163,7 +164,7 @@ export const launches = [
     landing_vehicle: null,
     links: {
       mission_patch:
-        "http://spacexpatchlist.space/images/thumbs/falcon_1_flight_4.png",
+        "https://spacexpatchlist.space/thumbs/spacex_f1_004_fourth_flight.png",
       article_link: "https://en.wikipedia.org/wiki/Ratsat",
       video_link: "https://www.youtube.com/watch?v=dLQ2tZEH6G0",
     },
@@ -204,7 +205,7 @@ export const launches = [
     landing_vehicle: null,
     links: {
       mission_patch:
-        "http://spacexpatchlist.space/images/thumbs/falcon_1_flight_5.png",
+        "https://spacexpatchlist.space/thumbs/spacex_f1_005_fifth_flight.png",
       presskit:
         "http://www.spacex.com/press/2012/12/19/spacexs-falcon-1-successfully-delivers-razaksat-satellite-orbit",
       article_link: "http://www.spacex.com/news/2013/02/12/falcon-1-flight-5",
