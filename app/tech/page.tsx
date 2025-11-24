@@ -52,7 +52,6 @@ export default function Technology() {
       <div className="flex-grow flex items-center justify-center">
         <div className="flex flex-col lg:flex-row text-center md:pb-28 lg:pb-0 items-center w-full">
 
-          {/* Mobile image moved to top for small screens */}
           <div className="lg:hidden flex items-center justify-center w-full mb-6">
             {tech.imageSrc ? (
               <Image
