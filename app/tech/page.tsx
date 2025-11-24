@@ -51,6 +51,21 @@ export default function Technology() {
 
       <div className="flex-grow flex items-center justify-center">
         <div className="flex flex-col lg:flex-row text-center md:pb-28 lg:pb-0 items-center w-full">
+
+          {/* Mobile image moved to top for small screens */}
+          <div className="lg:hidden flex items-center justify-center w-full mb-6">
+            {tech.imageSrc ? (
+              <Image
+                src={tech.imageSrc.replace('/images/technologies/lg-','/images/technologies/')}
+                alt={tech.name}
+                width={350}
+                height={220}
+                className="object-contain"
+                priority
+              />
+            ) : null}
+          </div>
+
           <div className="px-8 gap-4 lg:gap-8 flex lg:flex-col items-center justify-center">
             {technologies.map((_, index) => (
               <button
@@ -82,6 +97,8 @@ export default function Technology() {
               </p>
             </div>
           </div>
+
+          
 
           <div className="hidden lg:flex lg:items-center lg:justify-center lg:w-1/3 lg:pr-12">
             {tech.imageSrc ? (
