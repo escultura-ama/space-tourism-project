@@ -34,22 +34,33 @@ h3 {
   font-family: 'Bellefair', sans-serif;
 }
 
-/* Page background utilities (keeps existing Tailwind class names working) */
-.bg-destinations-bg {
-  background-image: url('/images/bg/destinations-bg.png');
-  background-position: center;
+.bg-tech-bg {
+  background-image: url('/images/bg/tech-bg.png');
   background-repeat: no-repeat;
+  background-position: center top;
 }
 
-.lg\:bg-lg-destinations-bg {
-  /* This selector matches the class name `lg:bg-lg-destinations-bg` used in JSX */
-  background-image: url('/images/bg/lg-destinations-bg.png');
-  background-position: center;
+.bg-lg-tech-bg {
+  background-image: url('/images/bg/lg-tech-bg.png');
   background-repeat: no-repeat;
+  background-position: center top;
 }
 
-/* Optional: other page backgrounds if you need them */
-.bg-home-bg { background-image: url('/images/bg/home-bg.png'); }
-.lg\:bg-lg-home-bg { background-image: url('/images/bg/lg-home-bg.png'); }
-.bg-tech-bg { background-image: url('/images/bg/tech-bg.png'); }
-.lg\:bg-lg-tech-bg { background-image: url('/images/bg/lg-tech-bg.png'); }
+@media (min-width: 1024px) {
+  .bg-tech-bg {
+    display: none;
+  }
+}
+
+.tech-background {
+  background-image: url('/images/bg/tech-bg.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .tech-background {
+    background-image: url('/images/bg/lg-tech-bg.png');
+  }
+}
