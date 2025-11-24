@@ -1,13 +1,4 @@
-<<<<<<< Updated upstream
 
-function Crew() {
-  return (
-    <div>Crew</div>
-  )
-}
-
-export default Crew
-=======
 "use client";
 
 import CrewCarousel from "../../components/CrewCarousel";
@@ -30,4 +21,4 @@ export default function CrewPage() {
     
   );
 }
->>>>>>> Stashed changes
+>
