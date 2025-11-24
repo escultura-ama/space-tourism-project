@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { destinations } from './data';
 
-const SKY_BLUE_COLOR = 'rgb(135, 206, 235)'; 
+// Updated: Use the solid RGB color value, as the CSS variable won't work in inline style
+const PRIMARY_TEXT_COLOR = 'rgb(208, 214, 249)';
 
 function Destination() {
   const [activeDestinationIndex, setActiveDestinationIndex] = useState(0);
