@@ -128,6 +128,21 @@ export default function Technology() {
               ) : null}
             </div>
           </div>
+
+          
+
+          <div className="hidden lg:flex lg:items-center lg:justify-center lg:w-1/3 lg:pr-12">
+            {tech.imageSrc ? (
+              <Image
+                src={tech.imageSrc}
+                alt={tech.name}
+                width={500}
+                height={500}
+                className="object-contain"
+                priority
+              />
+            ) : null}
+          </div>
         </div>
       </div>
     </main>
