@@ -43,7 +43,7 @@ export default function Technology() {
   const tech = technologies[activeTab];
 
   return (
-    <main className="bg-[--bg-tech-mobile] md:bg-[--bg-tech-desktop] bg-cover bg-no-repeat">
+    <main className="bg-lg-tech-bg bg-cover flex flex-col min-h-screen bg-black md:justify-around pt-20 md:pt-28 pb-12 lg:pl-28">
       <div className="flex text-white tracking-wider barlow-condensed mb-6 md:mb-10 justify-center md:justify-start md:ml-5 md:text-xl lg:pt-12 lg:text-2xl">
         <span className="opacity-25 mr-4 bold">03</span>
         <p>SPACE LAUNCH 101</p>
@@ -51,6 +51,8 @@ export default function Technology() {
 
       <div className="flex-grow flex items-center justify-center">
         <div className="flex flex-col lg:flex-row text-center md:pb-28 lg:pb-0 items-center w-full">
+          
+          {/* Buttons */}
           <div className="px-8 gap-4 lg:gap-8 flex lg:flex-col items-center justify-center">
             {technologies.map((_, index) => (
               <button
@@ -62,14 +64,13 @@ export default function Technology() {
                     : "border border-gray-400 text-gray-400 hover:text-white hover:border-white"
                 }`}
               >
-                <h2 className="Bellefair md:text-xl lg:text-2xl">
-                  {index + 1}
-                </h2>
+                <h2 className="Bellefair md:text-xl lg:text-2xl">{index + 1}</h2>
               </button>
             ))}
           </div>
 
-          <div className="lg:flex-1 lg:text-left lg:ml-12 px-8 lg:px-0">
+          {/* Text Content */}
+          <div className="lg:text-left lg:ml-12 px-8 lg:px-0">
             <h1 className="barlow-condensed text-primaryText tracking-widest uppercase mt-6 md:mt-14 lg:mt-0">
               {tech.title}
             </h1>
@@ -83,8 +84,9 @@ export default function Technology() {
             </div>
           </div>
 
+          {/* Image Section */}
           <div className="hidden lg:flex lg:items-center lg:justify-center lg:w-1/3 lg:pr-12">
-            {tech.imageSrc ? (
+            {tech.imageSrc && (
               <Image
                 src={tech.imageSrc}
                 alt={tech.name}
@@ -93,8 +95,9 @@ export default function Technology() {
                 className="object-contain"
                 priority
               />
-            ) : null}
+            )}
           </div>
+
         </div>
       </div>
     </main>
