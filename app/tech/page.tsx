@@ -51,6 +51,38 @@ export default function Technology() {
 
       <div className="flex-grow flex items-center justify-center">
         <div className="flex flex-col lg:flex-row text-center md:pb-28 lg:pb-0 items-center w-full">
+
+          <div className="block md:hidden w-full flex justify-center mb-6">
+            {tech.imageSrc && (
+              <div className="relative w-screen left-1/2 -translate-x-1/2 h-[220px]">
+              <Image
+                src={tech.imageSrc}
+                alt={tech.name}
+                fill
+                className="object-cover"
+                sizes="100vw"
+                priority
+                />
+              </div>
+            )}
+          </div>
+
+          <div className="hidden md:block lg:hidden w-full flex justify-center mb-6">
+            {tech.imageSrc && (
+              <div className="relative w-screen left-1/2 -translate-x-1/2 h-[320px]">
+              <Image
+                src={tech.imageSrc}
+                alt={tech.name}
+                fill
+                className="object-cover"
+                sizes="100vw"
+                priority
+                />
+              </div>
+            )}
+          </div>
+
+
           <div className="px-8 gap-4 lg:gap-8 flex lg:flex-col items-center justify-center">
             {technologies.map((_, index) => (
               <button
@@ -83,18 +115,19 @@ export default function Technology() {
             </div>
           </div>
 
-          <div className="hidden lg:flex lg:items-center lg:justify-center lg:w-1/3 lg:pr-12">
-            {tech.imageSrc ? (
-              <Image
-                src={tech.imageSrc}
-                alt={tech.name}
-                width={500}
-                height={500}
-                className="object-contain"
-                priority
-              />
-            ) : null}
-          </div>
+          <div className="hidden lg:block lg:absolute lg:top-1/2 lg:right-0 lg:-translate-y-1/2">
+            {tech.imageSrc && (
+              <div className="relative w-[500px] h-[500px]">
+                <Image
+                  src={tech.imageSrc}
+                  alt={tech.name}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            )}
+        </div>
         </div>
       </div>
     </main>
