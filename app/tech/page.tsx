@@ -9,6 +9,7 @@ interface Technology {
   title: string;
   description: string;
   imageSrc?: string;
+  imageSrcMobile?: string;
 }
 
 const technologies: Technology[] = [
@@ -19,6 +20,7 @@ const technologies: Technology[] = [
     description:
       "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
     imageSrc: "/images/technologies/lg-launch.png",
+    imageSrcMobile: "/images/technologies/sm-launch.png",
   },
   {
     id: 2,
@@ -27,6 +29,7 @@ const technologies: Technology[] = [
     description:
       "A spaceport or cosmodrome is a facility for launching (and potentially landing) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth's rotation for launch.",
     imageSrc: "/images/technologies/lg-spaceport.png",
+    imageSrcMobile: "/images/technologies/sm-spaceport.png",
   },
   {
     id: 3,
@@ -35,7 +38,9 @@ const technologies: Technology[] = [
     description:
       "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry design and has an integrated launch escape system, plus a parachute recovery system. Crew and cargo return to Earth inside modules.",
     imageSrc: "/images/technologies/lg-capsule.png",
+    imageSrcMobile: "/images/technologies/sm-capsule.png",
   },
+
 ];
 
 export default function Technology() {
@@ -43,58 +48,84 @@ export default function Technology() {
   const tech = technologies[activeTab];
 
   return (
-    <main className="bg-lg-tech-bg bg-cover flex flex-col min-h-screen bg-black md:justify-around pt-20 md:pt-28 pb-12 lg:pl-28">
-      <div className="flex text-white tracking-wider barlow-condensed mb-6 md:mb-10 justify-center md:justify-start md:ml-5 md:text-xl lg:pt-12 lg:text-2xl">
-        <span className="opacity-25 mr-4 bold">03</span>
-        <p>SPACE LAUNCH 101</p>
-      </div>
+    <main
+      className="flex flex-col min-h-screen md:justify-around pt-20 md:pt-28 pb-12 lg:pl-28 relative"
+      style={{
+        backgroundImage: "url('/images/technologies/background.jpg')", 
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      
+      <div className="absolute inset-0 bg-black/30 z-0" />
+      
+      
+      <div className="relative w-full z-10">
+        <div className="flex text-white tracking-wider barlow-condensed mb-6 md:mb-10 justify-center md:justify-start md:ml-5 md:text-xl lg:pt-12 lg:text-2xl">
+          <span className="opacity-25 mr-4 bold">03</span>
+          <p>SPACE LAUNCH 101</p>
+        </div>
 
-      <div className="flex-grow flex items-center justify-center">
-        <div className="flex flex-col lg:flex-row text-center md:pb-28 lg:pb-0 items-center w-full">
+        <div className="my-8 w-full lg:hidden">
+          {tech.imageSrcMobile ? (
+            <Image
+              src={tech.imageSrcMobile}
+              alt={tech.name}
+              width={768}
+              height={310}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          ) : null}
+        </div>
 
-          {/* Mobile image moved to top for small screens */}
-          <div className="lg:hidden flex items-center justify-center w-full mb-6">
-            {tech.imageSrc ? (
-              <Image
-                src={tech.imageSrc.replace('/images/technologies/lg-','/images/technologies/')}
-                alt={tech.name}
-                width={350}
-                height={220}
-                className="object-contain"
-                priority
-              />
-            ) : null}
-          </div>
+        <div className="flex-grow flex items-center justify-center">
+          <div className="flex flex-col lg:flex-row text-center md:pb-28 lg:pb-0 items-center w-full">
+            <div className="px-8 gap-4 lg:gap-8 flex lg:flex-col items-center justify-center">
+              {technologies.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveTab(index)}
+                  className={`flex cursor-pointer rounded-full w-10 h-10 md:w-16 md:h-16 items-center justify-center transition duration-150 ease-in-out ${
+                    activeTab === index
+                      ? "bg-white text-black"
+                      : "border border-gray-400 text-gray-400 hover:text-white hover:border-white"
+                  }`}
+                >
+                  <h2 className="Bellefair md:text-xl lg:text-2xl">
+                    {index + 1}
+                  </h2>
+                </button>
+              ))}
+            </div>
 
-          <div className="px-8 gap-4 lg:gap-8 flex lg:flex-col items-center justify-center">
-            {technologies.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTab(index)}
-                className={`flex cursor-pointer rounded-full w-10 h-10 md:w-16 md:h-16 items-center justify-center transition duration-150 ease-in-out ${
-                  activeTab === index
-                    ? "bg-white text-black"
-                    : "border border-gray-400 text-gray-400 hover:text-white hover:border-white"
-                }`}
-              >
-                <h2 className="Bellefair md:text-xl lg:text-2xl">
-                  {index + 1}
+            <div className="lg:flex-1 lg:text-left lg:ml-12 px-8 lg:px-0">
+              <h1 className="barlow-condensed text-primaryText tracking-widest uppercase mt-6 md:mt-8 lg:mt-0">
+                {tech.title}
+              </h1>
+              <div className="px-8 lg:px-0">
+                <h2 className="Bellefair text-2xl md:text-4xl font-semibold text-white mt-1 md:mt-4 mb-4 lg:mb-8 lg:text-[56px] lg:leading-tight">
+                  {tech.name}
                 </h2>
-              </button>
-            ))}
-          </div>
+                <p className="text-primaryText text-base barlow md:px-28 lg:px-0 lg:text-[18px] lg:w-2/3">
+                  {tech.description}
+                </p>
+              </div>
+            </div>
 
-          <div className="lg:flex-1 lg:text-left lg:ml-12 px-8 lg:px-0">
-            <h1 className="barlow-condensed text-primaryText tracking-widest uppercase mt-6 md:mt-14 lg:mt-0">
-              {tech.title}
-            </h1>
-            <div className="px-8 lg:px-0">
-              <h2 className="Bellefair text-2xl md:text-4xl font-semibold text-white mt-1 md:mt-4 mb-4 lg:mb-8 lg:text-[56px] lg:leading-tight">
-                {tech.name}
-              </h2>
-              <p className="text-primaryText text-base barlow md:px-28 lg:px-0 lg:text-[18px] lg:w-2/3">
-                {tech.description}
-              </p>
+            <div className="hidden lg:flex lg:items-center lg:justify-center lg:w-1/3 lg:pr-12">
+              {tech.imageSrc ? (
+                <Image
+                  src={tech.imageSrc}
+                  alt={tech.name}
+                  width={500}
+                  height={500}
+                  className="object-contain"
+                  priority
+                />
+              ) : null}
             </div>
           </div>
 
