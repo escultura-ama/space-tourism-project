@@ -108,9 +108,8 @@ export default function CrewCarousel() {
         <button
           key={m.id}
           onClick={() => setIndex(idx)}
-          className={`w-3 h-3 rounded-full mx-2 transition-transform transform hover:scale-125 ${
-            idx === currentIndex ? "bg-white" : "bg-gray-500/40"
-          }`}
+          className={`w-3 h-3 rounded-full mx-2 transition-transform transform hover:scale-125 ${idx === currentIndex ? "bg-white" : "bg-gray-500/40"
+            }`}
           aria-label={`Go to ${m.name}`}
         />
       ))}
@@ -119,7 +118,7 @@ export default function CrewCarousel() {
 
   return (
     <section
-      className="w-full h-full min-h-screen flex flex-col items-center justify-start relative overflow-hidden select-none pt-20"
+      className="w-full h-full min-h-screen flex flex-col items-center justify-start relative overflow-hidden select-none "
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
@@ -129,11 +128,9 @@ export default function CrewCarousel() {
       style={{ touchAction: "pan-y" }} // allow vertical scrolling
     >
       {/* Heading */}
-      <div className="container mx-auto px-4 mb-12">
-        <h1 className="text-3xl font-bold mb-8 flex items-center gap-4">
-          <span className="text-gray-500 font-extrabold">02</span>
-          MEET YOUR CREW
-        </h1>
+      <div className="flex w-full text-white tracking-wider barlow-condensed mb-6 md:mb-10 justify-center md:justify-start md:ml-5 md:text-xl lg:pt-12 lg:text-2xl">
+        <span className="opacity-25 mr-4 bold">02</span>
+        <p>MEET YOUR CREW</p>
       </div>
 
       {/* Slides wrapper */}
@@ -148,10 +145,10 @@ export default function CrewCarousel() {
         {CREW.map((member) => (
           <div
             key={member.id}
-            className="flex flex-col-reverse lg:flex-row items-center justify-around w-full flex-shrink-0 px-6"
+            className="flex flex-col-reverse lg:flex-row items-center justify-around w-full flex-shrink-0 "
           >
             {/* Info Section */}
-            <div className="lg:w-1/2 px-8 text-center lg:text-left mt-6 lg:mt-0">
+            <div className="lg:w-1/2 text-center lg:text-left mt-6 lg:mt-0">
               <h2 className="Bellefair opacity-50 text-white tracking-wider uppercase md:text-xl lg:text-[32px]">
                 {member.role}
               </h2>

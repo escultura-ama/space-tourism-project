@@ -7,18 +7,18 @@ export default function CrewPage() {
   return (
     <div
       className="
-        min-h-screen pt-24 pb-8
+        min-h-screen pt-20 md:pt-28 pb-12 lg:pl-28
         bg-cover bg-no-repeat bg-center
         bg-[url('/images/bg/crew-bg.png')]
         lg:bg-[url('/images/bg/lg-crew-bg.png')]
         text-white
       "
     >
-      
 
-        <CrewCarousel />
-      </div>
-    
+
+      <CrewCarousel />
+    </div>
+
   );
 }
 
