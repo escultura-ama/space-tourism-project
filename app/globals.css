@@ -8,9 +8,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
+  /* moved from unsupported `@theme inline` block so editors won't warn */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -35,3 +33,23 @@ h2,
 h3 {
   font-family: 'Bellefair', sans-serif;
 }
+
+/* Page background utilities (keeps existing Tailwind class names working) */
+.bg-destinations-bg {
+  background-image: url('/images/bg/destinations-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.lg\:bg-lg-destinations-bg {
+  /* This selector matches the class name `lg:bg-lg-destinations-bg` used in JSX */
+  background-image: url('/images/bg/lg-destinations-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Optional: other page backgrounds if you need them */
+.bg-home-bg { background-image: url('/images/bg/home-bg.png'); }
+.lg\:bg-lg-home-bg { background-image: url('/images/bg/lg-home-bg.png'); }
+.bg-tech-bg { background-image: url('/images/bg/tech-bg.png'); }
+.lg\:bg-lg-tech-bg { background-image: url('/images/bg/lg-tech-bg.png'); }

@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { destinations } from './data';
 
+const SKY_BLUE_COLOR = 'rgb(135, 206, 235)'; 
+
 function Destination() {
   const [activeDestinationIndex, setActiveDestinationIndex] = useState(0);
   const activeDestination = destinations[activeDestinationIndex];
