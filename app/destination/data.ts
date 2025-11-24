@@ -1,4 +1,4 @@
-export type Destination = {
+type Destination = {
   name: string;
   images: {
     png: string;

@@ -4,9 +4,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { destinations } from './data';
 
-// Updated: Use the solid RGB color value, as the CSS variable won't work in inline style
-const PRIMARY_TEXT_COLOR = 'rgb(208, 214, 249)';
-
 function Destination() {
   const [activeDestinationIndex, setActiveDestinationIndex] = useState(0);
   const activeDestination = destinations[activeDestinationIndex];
@@ -19,7 +16,7 @@ function Destination() {
       </div>
       <div className="lg:flex-row lg:flex lg:justify-evenly">
         <div className="flex justify-center lg:flex-1 p-10">
-          <Image src={activeDestination.images.png} width={445} height={445} alt={activeDestination.name} className="mb-6" />
+          {activeDestination.images && <Image src={activeDestination.images.png} width={445} height={445} alt={activeDestination.name} className="mb-6" />}
         </div>
         <div className="lg:items-start lg:flex-1 flex flex-col justify-between">
           <div className="px-8 text-center lg:text-left md:mt-8 lg:mt-0 lg:px-0 lg:top-0">
