@@ -22,14 +22,14 @@ export default function Home() {
       />
       <div className="relative flex flex-col lg:flex-row h-screen items-center place-content-around lg:px-36 lg:pt-32">
         <div className="px-8 items-center lg:items-start justify-center text-center flex flex-col lg:text-left">
-          <p className="tracking-wider md:text-xl lg:text-3xl lg:text-widest">
+          <p className="tracking-wider md:text-xl lg:text-3xl lg:text-widest barlow">
             SO, YOU WANT TO TRAVEL TO <br />
           </p>
           <h2 className="Bellefair text-6xl font-semibold text-white mt-6 mb-10 md:mb-12 md:text-9xl lg:text-[150px]">
             SPACE
           </h2>
 
-          <p className="text-base md:w-3/5 lg:text-xl">
+          <p className="text-base md:w-3/5 lg:text-xl barlow">
             Let&apos;s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we&apos;ll give you a truly out of
